@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacyverklaring van Koers</title>
+<meta name="description" content="Privacyverklaring van Koers: financiële gegevens blijven lokaal op je apparaat, zonder tracking, advertenties of abonnement.">
+<style>
+  :root {
+    --bg: #F7F8FA;
+    --card: #FFFFFF;
+    --border: #E3E6EA;
+    --text: #12161C;
+    --text-secondary: #5B6472;
+    --primary: #145DA0;
+    --primary-soft: #E8F0F9;
+    --accent: #0FA37F;
+    --accent-soft: #E3F5EF;
+    --rule: #12161C;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0E1116;
+      --card: #1C1F26;
+      --border: #2A2E37;
+      --text: #F2F4F7;
+      --text-secondary: #9BA3AF;
+      --primary: #5FB2FF;
+      --primary-soft: #16283A;
+      --accent: #3DDBB0;
+      --accent-soft: #123A32;
+      --rule: #F2F4F7;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0E1116;
+    --card: #1C1F26;
+    --border: #2A2E37;
+    --text: #F2F4F7;
+    --text-secondary: #9BA3AF;
+    --primary: #5FB2FF;
+    --primary-soft: #16283A;
+    --accent: #3DDBB0;
+    --accent-soft: #123A32;
+    --rule: #F2F4F7;
+  }
+  :root[data-theme="light"] {
+    --bg: #F7F8FA;
+    --card: #FFFFFF;
+    --border: #E3E6EA;
+    --text: #12161C;
+    --text-secondary: #5B6472;
+    --primary: #145DA0;
+    --primary-soft: #E8F0F9;
+    --accent: #0FA37F;
+    --accent-soft: #E3F5EF;
+    --rule: #12161C;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, ui-sans-serif, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, .display {
+    font-family: ui-serif, "New York", Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+    text-wrap: balance;
+  }
+  .page {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 5rem;
+  }
+  header.masthead {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2.25rem;
+  }
+  .mark {
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+    background: linear-gradient(160deg, var(--primary), var(--accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .mark svg { width: 22px; height: 22px; }
+  .wordmark {
+    font-family: ui-serif, "New York", Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .kicker {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.02em;
+  }
+  h1.title {
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    line-height: 1.08;
+    margin: 0 0 0.5rem;
+    font-weight: 600;
+  }
+  .effective {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin: 0 0 2.5rem;
+  }
+  .effective strong { color: var(--text); font-weight: 600; }
+
+  .summary {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.75rem 1.75rem 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .summary-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+  .summary-label::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .summary ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .summary li {
+    display: flex;
+    gap: 0.65rem;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+  }
+  .summary li::before {
+    content: "";
+    flex-shrink: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--primary);
+    margin-top: 0.55rem;
+  }
+  .summary b { font-weight: 600; }
+
+  nav.toc {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+  nav.toc .kicker { margin-bottom: 0.75rem; display: block; }
+  nav.toc ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    columns: 2;
+    column-gap: 1.5rem;
+  }
+  nav.toc li { break-inside: avoid; margin-bottom: 0.5rem; }
+  nav.toc a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+  nav.toc a:hover { color: var(--primary); }
+  nav.toc a .n { color: var(--text-secondary); font-variant-numeric: tabular-nums; }
+
+  section.clause {
+    margin-bottom: 2.75rem;
+    scroll-margin-top: 1.5rem;
+  }
+  section.clause h2 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin: 0 0 1rem;
+  }
+  section.clause h2 .n {
+    font-family: -apple-system, ui-sans-serif, sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.15rem 0.5rem;
+    font-variant-numeric: tabular-nums;
+  }
+  section.clause p, section.clause li {
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: var(--text);
+    max-width: 62ch;
+  }
+  section.clause p + p { margin-top: 0.85rem; }
+  section.clause ul {
+    margin: 0.85rem 0 0;
+    padding-left: 1.15rem;
+  }
+  section.clause li + li { margin-top: 0.5rem; }
+  section.clause a { color: var(--primary); }
+
+  .pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  .pill {
+    font-size: 0.8125rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    background: var(--primary-soft);
+    color: var(--primary);
+    font-weight: 500;
+  }
+  .pill.accent { background: var(--accent-soft); color: var(--accent); }
+
+  footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+  }
+  footer a { color: var(--text-secondary); }
+
+  @media (max-width: 520px) {
+    nav.toc ol { columns: 1; }
+    .page { padding: 2.5rem 1.25rem 4rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <header class="masthead">
+    <div class="mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 16L9 10L13 14L21 5" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="9" cy="10" r="1.8" fill="white"/>
+      </svg>
+    </div>
+    <div>
+      <div class="wordmark">Koers</div>
+      <div class="kicker">Rust en overzicht voor je financiële toekomst.</div>
+    </div>
+  </header>
+
+  <h1 class="title">Privacyverklaring</h1>
+  <p class="effective">Laatst bijgewerkt op <strong>31 juli 2026</strong>. Van toepassing op Koers voor iOS en iPadOS.</p>
+
+  <div class="summary">
+    <div class="summary-label">In het kort</div>
+    <ul>
+      <li><b>Je financiële plan blijft op je apparaat.</b> Fit Intel NL ontvangt je bedragen, plannen en berekeningen niet.</li>
+      <li><b>Geen account, analyses, advertenties of tracking.</b> Koers meet of verstuurt niet hoe je de app gebruikt.</li>
+      <li><b>Geen abonnement.</b> Koers Compleet is een eenmalige aankoop die door Apple wordt verwerkt. Koers ontvangt geen betaalgegevens.</li>
+      <li><b>Beveiliging is optioneel.</b> Je kunt Koers lokaal beschermen met een pincode en Face ID, Touch ID of andere ondersteunde Apple-biometrie.</li>
+      <li><b>Delen gebeurt alleen op jouw initiatief.</b> Koers exporteert of verstuurt niets totdat jij een app of ontvanger kiest.</li>
+    </ul>
+  </div>
+
+  <nav class="toc" aria-label="Inhoudsopgave">
+    <span class="kicker">Op deze pagina</span>
+    <ol>
+      <li><a href="#responsible"><span class="n">1</span> Verantwoordelijke en reikwijdte</a></li>
+      <li><a href="#data-we-collect"><span class="n">2</span> Gegevens en lokale verwerking</a></li>
+      <li><a href="#security"><span class="n">3</span> Pincode en biometrie</a></li>
+      <li><a href="#sharing"><span class="n">4</span> Export en feedback</a></li>
+      <li><a href="#purchase"><span class="n">5</span> Aankoop via Apple</a></li>
+      <li><a href="#third-parties"><span class="n">6</span> Externe partijen en website</a></li>
+      <li><a href="#backups"><span class="n">7</span> Bewaartermijnen en reservekopieën</a></li>
+      <li><a href="#deletion"><span class="n">8</span> Gegevens verwijderen</a></li>
+      <li><a href="#your-rights"><span class="n">9</span> Jouw privacyrechten</a></li>
+      <li><a href="#children"><span class="n">10</span> Kinderen</a></li>
+      <li><a href="#changes"><span class="n">11</span> Wijzigingen</a></li>
+      <li><a href="#contact"><span class="n">12</span> Contact</a></li>
+    </ol>
+  </nav>
+
+  <section class="clause" id="responsible">
+    <h2><span class="n">1</span> Verantwoordelijke en reikwijdte</h2>
+    <p>Fit Intel NL is de uitgever van Koers en verantwoordelijk voor deze privacyverklaring. Je kunt ons bereiken via <a href="mailto:fitintelnl@gmail.com">fitintelnl@gmail.com</a>.</p>
+    <p>Deze verklaring beschrijft Koers voor iOS en iPadOS, de eenmalige aankoop van Koers Compleet, vrijwillig contact met ons en het bezoek aan deze privacywebsite.</p>
+  </section>
+
+  <section class="clause" id="data-we-collect">
+    <h2><span class="n">2</span> Gegevens en lokale verwerking</h2>
+    <p>Koers verwerkt de informatie die jij invoert uitsluitend op je eigen apparaat. Dit kan bestaan uit je optionele voornaam, land- en valuta-instelling, inkomsten, uitgaven, budgetcategorieën, bezittingen, schulden, hypotheek- en leninggegevens, pensioenuitgangspunten, beleggingen, belastingaannames, doelen en favoriete gedachten.</p>
+    <p>Deze gegevens zijn nodig om de door jou gevraagde planners, grafieken, scenario's, exports en financiële samenvattingen te maken. Fit Intel NL ontvangt deze gegevens niet en heeft er geen toegang toe. Koers heeft geen gebruikersaccount, eigen backend, cloudsync, bankkoppeling, advertentienetwerk, analytics-SDK of trackingtechnologie.</p>
+    <p>Volgens Apples App Store-definitie worden gegevens die uitsluitend op het toestel worden verwerkt niet door de app verzameld. Daarom vermeldt het App Store-privacylabel voor deze versie dat Koers geen gegevens verzamelt.</p>
+    <div class="pill-row">
+      <span class="pill">Lokale SwiftData-opslag</span>
+      <span class="pill">Alleen op je apparaat</span>
+      <span class="pill accent">Geen tracking of cloudsync</span>
+    </div>
+  </section>
+
+  <section class="clause" id="security">
+    <h2><span class="n">3</span> Pincode en biometrie</h2>
+    <p>Je kunt de app optioneel beveiligen met een pincode van zes cijfers. Koers bewaart niet de pincode zelf, maar een beveiligde, gezouten controlewaarde in de Apple Keychain van je apparaat. Deze controlewaarde is alleen voor dit toestel bedoeld.</p>
+    <p>Als je Face ID, Touch ID of andere ondersteunde Apple-biometrie inschakelt, voert iOS de controle uit. Koers ontvangt alleen het resultaat geslaagd of niet geslaagd. Koers kan je gezicht, vingerafdruk of andere biometrische sjabloon niet bekijken of opslaan.</p>
+    <p>Je verwijdert de pincodecontrole uit de Keychain door de appvergrendeling in Koers uit te schakelen. Wil je de beveiligingsgegevens zeker verwijderen voordat je Koers verwijdert, schakel de appvergrendeling dan eerst uit.</p>
+  </section>
+
+  <section class="clause" id="sharing">
+    <h2><span class="n">4</span> Export en feedback</h2>
+    <p>Koers kan op jouw verzoek een leesbaar bestand met financiële gegevens maken. Het bestand blijft onder jouw controle totdat je via het Apple-deelvenster bijvoorbeeld Bestanden, Mail, AirDrop of een andere app kiest. Koers verstuurt dit bestand niet automatisch en Fit Intel NL ontvangt geen kopie.</p>
+    <p>Ook feedback wordt pas gedeeld nadat jij een ontvangende app en ontvanger kiest. Vanaf dat moment geldt ook het privacybeleid van de gekozen app of dienst. Controleer de inhoud en ontvanger zorgvuldig, want financiële exports kunnen gevoelige informatie bevatten.</p>
+    <p>Als je vrijwillig rechtstreeks contact met ons opneemt, verwerken wij je e-mailadres, bericht en eventuele bijlagen om je vraag of feedback te behandelen. De grondslag is het uitvoeren van je verzoek en ons gerechtvaardigde belang om ondersteuning te bieden en Koers te verbeteren. Stuur geen financiële export mee tenzij dat noodzakelijk is en je dit bewust wilt delen.</p>
+  </section>
+
+  <section class="clause" id="purchase">
+    <h2><span class="n">5</span> Eenmalige aankoop via Apple</h2>
+    <p>Koers Compleet is een niet-verbruikbare, eenmalige App Store-aankoop. Er is geen proefperiode en geen maandelijkse of jaarlijkse automatische verlenging.</p>
+    <p>Bij het tonen van de prijs, kopen of herstellen communiceert Koers via Apple StoreKit. Apple verwerkt je Apple Account, betaling, aankoopgeschiedenis en andere gegevens die nodig zijn voor de App Store. Koers ontvangt geen kaartnummer, bankrekening, factuuradres of Apple Account. De app controleert alleen bij Apple of de aankoop geldig is en bewaart de toegang niet in een eigen gebruikersdatabase.</p>
+    <p>Voor Apples verwerking geldt de <a href="https://www.apple.com/nl/legal/privacy/data/nl/app-store/" target="_blank" rel="noopener">informatie over de App Store en privacy van Apple</a>.</p>
+  </section>
+
+  <section class="clause" id="third-parties">
+    <h2><span class="n">6</span> Externe partijen en website</h2>
+    <p>Koers bevat geen externe SDK's voor analyses, advertenties, tracking of crashrapportage. Voor de App Store-aankoop gebruikt Koers uitsluitend Apple StoreKit.</p>
+    <p>Wanneer jij de systeemfunctie voor delen gebruikt, verwerkt de door jou gekozen app of dienst de gedeelde informatie onder haar eigen voorwaarden. Wanneer je ons e-mailt, verwerkt onze e-mailprovider de technische en inhoudelijke gegevens die nodig zijn voor de bezorging en opslag van je bericht.</p>
+    <p>Deze privacywebsite wordt aangeboden via GitHub Pages. GitHub kan bij een bezoek technische verbindingsgegevens verwerken, zoals je IP-adres, browsertype en tijdstip, voor beveiliging en levering van de pagina. Fit Intel NL plaatst op deze pagina geen eigen trackingcookies of analytics. Zie het <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">privacybeleid van GitHub</a>.</p>
+  </section>
+
+  <section class="clause" id="backups">
+    <h2><span class="n">7</span> Bewaartermijnen en reservekopieën</h2>
+    <p>Lokale plangegevens blijven op je apparaat totdat je ze in Koers wist of de app verwijdert. Een door jou gemaakte export blijft bestaan op de gekozen opslaglocatie totdat jij hem daar verwijdert.</p>
+    <p>Als je een reservekopie van je iPhone of iPad maakt, bijvoorbeeld via iCloud of een computer, kan iOS de lokale gegevens van Koers daarin opnemen. Fit Intel NL heeft geen toegang tot en geen controle over deze reservekopieën.</p>
+    <p>Berichten die je vrijwillig aan ons stuurt bewaren wij niet langer dan nodig om je verzoek af te handelen en eventuele opvolging te bieden. In de regel verwijderen wij ondersteuningscorrespondentie binnen twaalf maanden, tenzij een langere bewaartermijn noodzakelijk is voor een juridisch geschil of wettelijke verplichting.</p>
+  </section>
+
+  <section class="clause" id="deletion">
+    <h2><span class="n">8</span> Gegevens verwijderen</h2>
+    <p>Je houdt zelf de controle over de gegevens op je apparaat:</p>
+    <ul>
+      <li>Je kunt afzonderlijke invoer in de app wijzigen of verwijderen.</li>
+      <li>Via <b>Instellingen, Wis alle gegevens</b> verwijder je de financiële plangegevens, routekeuzes en lokale plannerinstellingen.</li>
+      <li>Schakel de appvergrendeling apart uit om de beveiligde pincodecontrole uit de Keychain te verwijderen.</li>
+      <li>Als je de app verwijdert, verwijdert iOS de lokale appdatabase van dat apparaat. Door jou gedeelde exports, reservekopieën en berichten bij andere diensten worden daarmee niet verwijderd.</li>
+      <li>Het wissen van lokale gegevens verwijdert je App Store-aankoop niet. Die aankoop wordt door Apple beheerd en kan worden hersteld.</li>
+    </ul>
+  </section>
+
+  <section class="clause" id="your-rights">
+    <h2><span class="n">9</span> Jouw privacyrechten</h2>
+    <p>De AVG geeft je, afhankelijk van de situatie, rechten op inzage, correctie, verwijdering, beperking, overdraagbaarheid en bezwaar. Fit Intel NL heeft geen toegang tot je lokaal opgeslagen financiële plan en kan daarvan daarom geen kopie verstrekken of gegevens op afstand aanpassen. Je kunt deze gegevens rechtstreeks in Koers bekijken, wijzigen, exporteren en verwijderen.</p>
+    <p>Voor persoonsgegevens die je vrijwillig aan ons hebt gestuurd, zoals ondersteuningscorrespondentie, kun je een verzoek indienen via <a href="mailto:fitintelnl@gmail.com">fitintelnl@gmail.com</a>. We kunnen om redelijke informatie vragen om je identiteit en verzoek te controleren.</p>
+    <p>Je kunt ook een klacht indienen bij de <a href="https://autoriteitpersoonsgegevens.nl/een-tip-of-klacht-indienen-bij-de-ap" target="_blank" rel="noopener">Autoriteit Persoonsgegevens</a>.</p>
+  </section>
+
+  <section class="clause" id="children">
+    <h2><span class="n">10</span> Kinderen</h2>
+    <p>Koers is een financiële planningstool voor volwassenen en is niet specifiek gericht op kinderen. De app vraagt niet om een geboortedatum en stuurt geen financiële invoer naar Fit Intel NL.</p>
+  </section>
+
+  <section class="clause" id="changes">
+    <h2><span class="n">11</span> Wijzigingen</h2>
+    <p>Als deze verklaring wijzigt, passen we de datum bovenaan aan. Als de gegevensverwerking van Koers wezenlijk verandert, werken we ook het App Store-privacylabel bij en informeren we gebruikers waar dat nodig is.</p>
+  </section>
+
+  <section class="clause" id="contact">
+    <h2><span class="n">12</span> Contact</h2>
+    <p>Vragen over privacy, ondersteuning of het uitoefenen van je rechten kun je sturen naar:</p>
+    <p><strong>Fit Intel NL</strong><br><a href="mailto:fitintelnl@gmail.com">fitintelnl@gmail.com</a></p>
+  </section>
+
+    <footer>
+      <span>© 2026 Koers</span>
+      <span>Koers is een planningstool en geen financieel of fiscaal advies.</span>
+    </footer>
+</div>
+</body>
+</html>
